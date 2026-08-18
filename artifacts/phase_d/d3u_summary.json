@@ -1,0 +1,219 @@
+{
+  "candidate": "D3u-D1u-soft-gate-viterbi",
+  "pooled_accuracy": 0.5837967698936731,
+  "pooled_macro_f1": 0.5684240756515049,
+  "pooled_abnormal_f1": 0.6970744847459751,
+  "worst_subject_accuracy": 0.4378698224852071,
+  "worst_subject": 3,
+  "outer_selections": {
+    "1": {
+      "outer_held_out_subject": 1,
+      "outer_train_subjects": [
+        2,
+        3,
+        5
+      ],
+      "inner_splits": [
+        {
+          "train_subjects": [
+            3,
+            5
+          ],
+          "validation_subject": 2
+        },
+        {
+          "train_subjects": [
+            2,
+            5
+          ],
+          "validation_subject": 3
+        },
+        {
+          "train_subjects": [
+            2,
+            3
+          ],
+          "validation_subject": 5
+        }
+      ],
+      "selected_candidate_index": 10,
+      "selection_source": "resumable_pair_search",
+      "candidate": "D3u-D1u-soft-gate-viterbi",
+      "base_candidate": "D1u-regularized-C-unlabeled-inference",
+      "selected_config": {
+        "feature_budget": 1024,
+        "learning_rate": 0.03,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 80,
+        "l2_regularization": 5.0,
+        "weighting": "sqrt_balanced"
+      },
+      "alpha": 0.0,
+      "transition_strength": 2.0,
+      "inner_summary": {
+        "mean_accuracy": 0.6469919304067752,
+        "worst_accuracy": 0.43322062552831786,
+        "mean_macro_f1": 0.5922744828613516,
+        "mean_abnormal_f1": 0.7281926623362338
+      },
+      "held_out_labels_used_for_windowing": false
+    },
+    "2": {
+      "outer_held_out_subject": 2,
+      "outer_train_subjects": [
+        1,
+        3,
+        5
+      ],
+      "inner_splits": [
+        {
+          "train_subjects": [
+            3,
+            5
+          ],
+          "validation_subject": 1
+        },
+        {
+          "train_subjects": [
+            1,
+            5
+          ],
+          "validation_subject": 3
+        },
+        {
+          "train_subjects": [
+            1,
+            3
+          ],
+          "validation_subject": 5
+        }
+      ],
+      "selected_candidate_index": 15,
+      "selection_source": "resumable_pair_search",
+      "candidate": "D3u-D1u-soft-gate-viterbi",
+      "base_candidate": "D1u-regularized-C-unlabeled-inference",
+      "selected_config": {
+        "feature_budget": 256,
+        "learning_rate": 0.06,
+        "max_leaf_nodes": 63,
+        "min_samples_leaf": 20,
+        "l2_regularization": 1.0,
+        "weighting": "sqrt_balanced"
+      },
+      "alpha": 0.0,
+      "transition_strength": 2.0,
+      "inner_summary": {
+        "mean_accuracy": 0.5828329753336473,
+        "worst_accuracy": 0.3865877712031558,
+        "mean_macro_f1": 0.5946614121762006,
+        "mean_abnormal_f1": 0.7692280025008555
+      },
+      "held_out_labels_used_for_windowing": false
+    },
+    "3": {
+      "outer_held_out_subject": 3,
+      "outer_train_subjects": [
+        1,
+        2,
+        5
+      ],
+      "inner_splits": [
+        {
+          "train_subjects": [
+            2,
+            5
+          ],
+          "validation_subject": 1
+        },
+        {
+          "train_subjects": [
+            1,
+            5
+          ],
+          "validation_subject": 2
+        },
+        {
+          "train_subjects": [
+            1,
+            2
+          ],
+          "validation_subject": 5
+        }
+      ],
+      "selected_candidate_index": 9,
+      "selection_source": "resumable_pair_search",
+      "candidate": "D3u-D1u-soft-gate-viterbi",
+      "base_candidate": "D1u-regularized-C-unlabeled-inference",
+      "selected_config": {
+        "feature_budget": 256,
+        "learning_rate": 0.03,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "l2_regularization": 5.0,
+        "weighting": "sqrt_balanced"
+      },
+      "alpha": 0.0,
+      "transition_strength": 1.0,
+      "inner_summary": {
+        "mean_accuracy": 0.610115508941187,
+        "worst_accuracy": 0.5633684210526316,
+        "mean_macro_f1": 0.5886458025398214,
+        "mean_abnormal_f1": 0.765182246965832
+      },
+      "held_out_labels_used_for_windowing": false
+    },
+    "5": {
+      "outer_held_out_subject": 5,
+      "outer_train_subjects": [
+        1,
+        2,
+        3
+      ],
+      "inner_splits": [
+        {
+          "train_subjects": [
+            2,
+            3
+          ],
+          "validation_subject": 1
+        },
+        {
+          "train_subjects": [
+            1,
+            3
+          ],
+          "validation_subject": 2
+        },
+        {
+          "train_subjects": [
+            1,
+            2
+          ],
+          "validation_subject": 3
+        }
+      ],
+      "selected_candidate_index": 1,
+      "selection_source": "resumable_pair_search",
+      "candidate": "D3u-D1u-soft-gate-viterbi",
+      "base_candidate": "D1u-regularized-C-unlabeled-inference",
+      "selected_config": {
+        "feature_budget": 256,
+        "learning_rate": 0.03,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 80,
+        "l2_regularization": 1.0,
+        "weighting": "none"
+      },
+      "alpha": 0.0,
+      "transition_strength": 2.0,
+      "inner_summary": {
+        "mean_accuracy": 0.6318586909095435,
+        "worst_accuracy": 0.4364609749225134,
+        "mean_macro_f1": 0.5704872714775635,
+        "mean_abnormal_f1": 0.7095449881444269
+      },
+      "held_out_labels_used_for_windowing": false
+    }
+  },
+  "held_out_windowing": "unlabeled_continuous_stride75"
+}

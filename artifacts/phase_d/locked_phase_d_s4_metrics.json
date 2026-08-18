@@ -1,0 +1,74 @@
+{
+  "accuracy": 0.7992006615214995,
+  "macro_f1": 0.840993992101531,
+  "abnormal_f1": 0.8678787878787879,
+  "abnormal_precision": 0.7929125138427464,
+  "abnormal_recall": 0.9585006693440429,
+  "classification_report": {
+    "Attacking": {
+      "precision": 0.8615384615384616,
+      "recall": 0.9655172413793104,
+      "f1-score": 0.9105691056910569,
+      "support": 4350.0
+    },
+    "Biting": {
+      "precision": 0.6286043829296425,
+      "recall": 0.9628975265017667,
+      "f1-score": 0.7606420097697139,
+      "support": 8490.0
+    },
+    "Eating snacks": {
+      "precision": 0.7993393889347646,
+      "recall": 0.7719298245614035,
+      "f1-score": 0.785395537525355,
+      "support": 18810.0
+    },
+    "Head banging": {
+      "precision": 1.0,
+      "recall": 0.9387755102040817,
+      "f1-score": 0.968421052631579,
+      "support": 5880.0
+    },
+    "Sitting quietly": {
+      "precision": 0.8965811965811966,
+      "recall": 0.655625,
+      "f1-score": 0.7574007220216606,
+      "support": 24000.0
+    },
+    "Throwing things": {
+      "precision": 0.9349593495934959,
+      "recall": 0.9349593495934959,
+      "f1-score": 0.9349593495934959,
+      "support": 3690.0
+    },
+    "Using phone": {
+      "precision": 0.6073943661971831,
+      "recall": 0.6626120358514724,
+      "f1-score": 0.6338028169014085,
+      "support": 23430.0
+    },
+    "Walking": {
+      "precision": 0.96996336996337,
+      "recall": 0.9836552748885586,
+      "f1-score": 0.9767613426779787,
+      "support": 20190.0
+    },
+    "accuracy": 0.7992006615214995,
+    "macro avg": {
+      "precision": 0.8372975644672642,
+      "recall": 0.8594964703725112,
+      "f1-score": 0.840993992101531,
+      "support": 108840.0
+    },
+    "weighted avg": {
+      "precision": 0.8157191894720419,
+      "recall": 0.7992006615214995,
+      "f1-score": 0.8001181639123008,
+      "support": 108840.0
+    }
+  },
+  "error_rate": 0.2007993384785005,
+  "evaluated_frames": 108840,
+  "non_target_frames_excluded": 9081,
+  "s4_status": "secondary_non_blind_evaluation"
+}

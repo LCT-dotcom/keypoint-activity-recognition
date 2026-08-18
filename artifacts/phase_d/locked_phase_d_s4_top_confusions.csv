@@ -1,0 +1,57 @@
+true_label,predicted_label,row_error_rate,frames
+Sitting quietly,Using phone,0.34,8160
+Using phone,Eating snacks,0.13892445582586427,3255
+Using phone,Biting,0.12804097311139565,3000
+Eating snacks,Using phone,0.09968102073365231,1875
+Eating snacks,Biting,0.09569377990430622,1800
+Using phone,Sitting quietly,0.0678617157490397,1590
+Head banging,Walking,0.05102040816326531,300
+Throwing things,Walking,0.044715447154471545,165
+Biting,Eating snacks,0.037102473498233215,315
+Attacking,Walking,0.034482758620689655,150
+Throwing things,Attacking,0.02032520325203252,75
+Eating snacks,Attacking,0.01594896331738437,300
+Walking,Attacking,0.014858841010401188,300
+Eating snacks,Sitting quietly,0.011961722488038277,225
+Head banging,Throwing things,0.01020408163265306,60
+Eating snacks,Throwing things,0.004784688995215311,90
+Sitting quietly,Eating snacks,0.003125,75
+Using phone,Throwing things,0.002560819462227913,60
+Walking,Throwing things,0.0014858841010401188,30
+Sitting quietly,Biting,0.00125,30
+Attacking,Biting,0.0,0
+Attacking,Eating snacks,0.0,0
+Attacking,Head banging,0.0,0
+Attacking,Sitting quietly,0.0,0
+Attacking,Throwing things,0.0,0
+Attacking,Using phone,0.0,0
+Biting,Attacking,0.0,0
+Biting,Head banging,0.0,0
+Biting,Sitting quietly,0.0,0
+Biting,Throwing things,0.0,0
+Biting,Using phone,0.0,0
+Biting,Walking,0.0,0
+Eating snacks,Head banging,0.0,0
+Eating snacks,Walking,0.0,0
+Head banging,Attacking,0.0,0
+Head banging,Biting,0.0,0
+Head banging,Eating snacks,0.0,0
+Head banging,Sitting quietly,0.0,0
+Head banging,Using phone,0.0,0
+Sitting quietly,Attacking,0.0,0
+Sitting quietly,Head banging,0.0,0
+Sitting quietly,Throwing things,0.0,0
+Sitting quietly,Walking,0.0,0
+Throwing things,Biting,0.0,0
+Throwing things,Eating snacks,0.0,0
+Throwing things,Head banging,0.0,0
+Throwing things,Sitting quietly,0.0,0
+Throwing things,Using phone,0.0,0
+Using phone,Attacking,0.0,0
+Using phone,Head banging,0.0,0
+Using phone,Walking,0.0,0
+Walking,Biting,0.0,0
+Walking,Eating snacks,0.0,0
+Walking,Head banging,0.0,0
+Walking,Sitting quietly,0.0,0
+Walking,Using phone,0.0,0

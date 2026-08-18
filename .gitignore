@@ -1,0 +1,53 @@
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.pytest_tmp/
+.pytest-tmp-*/
+.test-runtime/
+pytest-cache-files-*/
+
+# Local environments and editor state
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+
+# Raw/private data and temporary renders
+data/
+datasets/
+Train Data*/
+Final Participant*/
+tmp/
+
+# Reproducible caches and intermediate experiment artifacts
+artifacts/**
+!artifacts/phase_d/
+artifacts/phase_d/**
+!artifacts/phase_d/final_phase_d_all_five_subjects.joblib
+!artifacts/phase_d/locked_phase_d_subjects_1_2_3_5.joblib
+!artifacts/phase_d/final_comparison.json
+!artifacts/phase_d/d0u_fold_metrics.csv
+!artifacts/phase_d/d0u_summary.json
+!artifacts/phase_d/d1u_fold_metrics.csv
+!artifacts/phase_d/d1u_summary.json
+!artifacts/phase_d/d2_fold_metrics.csv
+!artifacts/phase_d/d2_summary.json
+!artifacts/phase_d/d3u_fold_metrics.csv
+!artifacts/phase_d/d3u_summary.json
+!artifacts/phase_d/d4_fold_metrics.csv
+!artifacts/phase_d/d4_summary.json
+!artifacts/phase_d/five_subject_fold_metrics.csv
+!artifacts/phase_d/five_subject_summary.json
+!artifacts/phase_d/five_subject_confusion_subject_*.csv
+!artifacts/phase_d/locked_phase_d_s4_metrics.json
+!artifacts/phase_d/locked_phase_d_s4_confusion.csv
+!artifacts/phase_d/locked_phase_d_s4_top_confusions.csv
+
+# Generated predictions: keep only the compact challenge submission
+outputs/**
+!outputs/phase_d/
+outputs/phase_d/**
+!outputs/phase_d/submission_phase_d.csv

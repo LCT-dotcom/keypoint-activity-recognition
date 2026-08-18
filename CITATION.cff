@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper."
+title: "Human Behavior Recognition Using 2D Time-Series Data and Machine Learning Models"
+type: article
+authors:
+  - family-names: Ly
+    given-names: Chinh Tan
+  - family-names: Huynh
+    given-names: Quang Linh
+journal: "Journal of Physics: Conference Series"
+volume: "3180"
+issue: "1"
+year: 2026
+doi: "10.1088/1742-6596/3180/1/012004"

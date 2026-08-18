@@ -1,0 +1,178 @@
+{
+  "candidate": "D4-shallow-multistream-TCN",
+  "pooled_accuracy": 0.5109953811339472,
+  "pooled_macro_f1": 0.5182865363754962,
+  "pooled_abnormal_f1": 0.6283480385502919,
+  "worst_subject_accuracy": 0.38461538461538464,
+  "worst_subject": 3,
+  "outer_audits": {
+    "1": {
+      "outer_held_out_subject": 1,
+      "outer_train_subjects": [
+        2,
+        3,
+        5
+      ],
+      "inner_splits": [
+        {
+          "train_subjects": [
+            3,
+            5
+          ],
+          "validation_subject": 2
+        },
+        {
+          "train_subjects": [
+            2,
+            5
+          ],
+          "validation_subject": 3
+        },
+        {
+          "train_subjects": [
+            2,
+            3
+          ],
+          "validation_subject": 5
+        }
+      ],
+      "candidate": "D4-shallow-multistream-TCN",
+      "selected_candidate_index": 2,
+      "selected_config": {
+        "channels": 32,
+        "blocks": 4,
+        "dropout": 0.2,
+        "loss": "cross_entropy",
+        "aux_weight": 0.2
+      },
+      "fixed_outer_epochs": 13,
+      "epoch_rule": "median(best_inner_epoch_plus_one)"
+    },
+    "2": {
+      "outer_held_out_subject": 2,
+      "outer_train_subjects": [
+        1,
+        3,
+        5
+      ],
+      "inner_splits": [
+        {
+          "train_subjects": [
+            3,
+            5
+          ],
+          "validation_subject": 1
+        },
+        {
+          "train_subjects": [
+            1,
+            5
+          ],
+          "validation_subject": 3
+        },
+        {
+          "train_subjects": [
+            1,
+            3
+          ],
+          "validation_subject": 5
+        }
+      ],
+      "candidate": "D4-shallow-multistream-TCN",
+      "selected_candidate_index": 5,
+      "selected_config": {
+        "channels": 64,
+        "blocks": 4,
+        "dropout": 0.4,
+        "loss": "focal",
+        "aux_weight": 0.0
+      },
+      "fixed_outer_epochs": 5,
+      "epoch_rule": "median(best_inner_epoch_plus_one)"
+    },
+    "3": {
+      "outer_held_out_subject": 3,
+      "outer_train_subjects": [
+        1,
+        2,
+        5
+      ],
+      "inner_splits": [
+        {
+          "train_subjects": [
+            2,
+            5
+          ],
+          "validation_subject": 1
+        },
+        {
+          "train_subjects": [
+            1,
+            5
+          ],
+          "validation_subject": 2
+        },
+        {
+          "train_subjects": [
+            1,
+            2
+          ],
+          "validation_subject": 5
+        }
+      ],
+      "candidate": "D4-shallow-multistream-TCN",
+      "selected_candidate_index": 2,
+      "selected_config": {
+        "channels": 32,
+        "blocks": 4,
+        "dropout": 0.2,
+        "loss": "cross_entropy",
+        "aux_weight": 0.2
+      },
+      "fixed_outer_epochs": 5,
+      "epoch_rule": "median(best_inner_epoch_plus_one)"
+    },
+    "5": {
+      "outer_held_out_subject": 5,
+      "outer_train_subjects": [
+        1,
+        2,
+        3
+      ],
+      "inner_splits": [
+        {
+          "train_subjects": [
+            2,
+            3
+          ],
+          "validation_subject": 1
+        },
+        {
+          "train_subjects": [
+            1,
+            3
+          ],
+          "validation_subject": 2
+        },
+        {
+          "train_subjects": [
+            1,
+            2
+          ],
+          "validation_subject": 3
+        }
+      ],
+      "candidate": "D4-shallow-multistream-TCN",
+      "selected_candidate_index": 3,
+      "selected_config": {
+        "channels": 64,
+        "blocks": 3,
+        "dropout": 0.2,
+        "loss": "cross_entropy",
+        "aux_weight": 0.2
+      },
+      "fixed_outer_epochs": 4,
+      "epoch_rule": "median(best_inner_epoch_plus_one)"
+    }
+  }
+}

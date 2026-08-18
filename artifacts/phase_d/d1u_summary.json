@@ -1,0 +1,9 @@
+{
+  "candidate": "D1u-regularized-C-unlabeled-inference",
+  "pooled_accuracy": 0.5826498031557085,
+  "pooled_macro_f1": 0.5669727666690997,
+  "pooled_abnormal_f1": 0.6964542119948585,
+  "worst_subject_accuracy": 0.43364327979712597,
+  "worst_subject": 3,
+  "held_out_windowing": "unlabeled_continuous_stride75"
+}

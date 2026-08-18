@@ -1,0 +1,18 @@
+{
+  "method": "locked-D3-D1-five-subject-LOSO",
+  "pooled_accuracy": 0.7330922745288923,
+  "pooled_macro_f1": 0.763900758902359,
+  "pooled_abnormal_f1": 0.8934206731759569,
+  "worst_subject_accuracy": 0.577864476386037,
+  "worst_subject": 1,
+  "config_locked_before_s4": {
+    "feature_budget": 256,
+    "learning_rate": 0.06,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 20,
+    "l2_regularization": 1.0,
+    "weighting": "sqrt_balanced"
+  },
+  "transition_strength_locked_before_s4": 2.0,
+  "method_reselected_after_s4": false
+}
