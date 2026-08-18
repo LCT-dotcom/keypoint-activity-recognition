@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the associated paper."
+message: "If you use this repository, please cite the associated paper and acknowledge the challenge dataset providers."
 title: "Human Behavior Recognition Using 2D Time-Series Data and Machine Learning Models"
 type: article
 authors:
@@ -12,3 +12,14 @@ volume: "3180"
 issue: "1"
 year: 2026
 doi: "10.1088/1742-6596/3180/1/012004"
+references:
+  - type: generic
+    title: "Challenge: Abnormal Activity Detection in Individuals with Developmental Disabilities"
+    authors:
+      - family-names: Fujioka
+        given-names: Taihei
+      - family-names: Garcia
+        given-names: Christina
+      - family-names: Inoue
+        given-names: Sozo
+    year: 2025

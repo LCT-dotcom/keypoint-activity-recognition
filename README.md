@@ -98,6 +98,10 @@ The `.joblib` artifacts are desktop reference models. TSFEL and HistGradientBoos
 
 Raw participant CSV files are not included. They may contain challenge-controlled or sensitive behavioral data. Place authorized data outside the repository and supply its location through the CLI arguments.
 
+### Dataset Attribution
+
+The challenge dataset was provided by **Taihei Fujioka, Christina Garcia, and Sozo Inoue** for *Challenge: Abnormal Activity Detection in Individuals with Developmental Disabilities* (2025). Users of the challenge data should cite the dataset providers in addition to the associated research paper below.
+
 ## Citation
 
 ```bibtex
@@ -109,5 +113,12 @@ Raw participant CSV files are not included. They may contain challenge-controlle
   pages   = {012004},
   year    = {2026},
   doi     = {10.1088/1742-6596/3180/1/012004}
+}
+
+@misc{fujioka2025challenge,
+  author = {Fujioka, Taihei and Garcia, Christina and Inoue, Sozo},
+  title  = {Challenge: Abnormal Activity Detection in Individuals with Developmental Disabilities},
+  year   = {2025},
+  note   = {Challenge dataset and task specification}
 }
 ```

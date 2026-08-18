@@ -2,6 +2,8 @@
 
 ## Relationship to the Published Paper
 
+The underlying challenge dataset and task specification were provided by Taihei Fujioka, Christina Garcia, and Sozo Inoue in *Challenge: Abnormal Activity Detection in Individuals with Developmental Disabilities* (2025). This dataset citation is separate from, and should accompany, citation of the associated research paper.
+
 The paper defines the research foundation used by this repository:
 
 - 17 COCO 2D keypoints rather than identifiable RGB video;
