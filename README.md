@@ -20,6 +20,28 @@ The selected method is **D3u**: V7-compatible experiment-C features, training-on
 
 These protocols use different training sets and must not be averaged or directly compared with the paper's original window-level results. See [Paper Alignment and Future Work](docs/PAPER_AND_FUTURE_WORK.md).
 
+## Confusion Matrices
+
+These PNG files are extracted unchanged from the executed V11 notebook outputs. The underlying CSV matrices remain available under `artifacts/phase_d/` for numerical inspection.
+
+### Locked Four-Subject Model Evaluated on S4
+
+![S4 confusion matrix for the locked model](docs/results/s4_locked_confusion_matrix.png)
+
+### Final Five-Subject LOSO
+
+| Held-Out S1 | Held-Out S2 |
+|---|---|
+| ![Five-subject LOSO confusion matrix for held-out S1](docs/results/five_subject_loso_s1_confusion_matrix.png) | ![Five-subject LOSO confusion matrix for held-out S2](docs/results/five_subject_loso_s2_confusion_matrix.png) |
+
+| Held-Out S3 | Held-Out S4 |
+|---|---|
+| ![Five-subject LOSO confusion matrix for held-out S3](docs/results/five_subject_loso_s3_confusion_matrix.png) | ![Five-subject LOSO confusion matrix for held-out S4](docs/results/five_subject_loso_s4_confusion_matrix.png) |
+
+| Held-Out S5 |
+|---|
+| ![Five-subject LOSO confusion matrix for held-out S5](docs/results/five_subject_loso_s5_confusion_matrix.png) |
+
 ## Method
 
 1. Clean 17 COCO keypoints and normalize pose relative to the torso.
