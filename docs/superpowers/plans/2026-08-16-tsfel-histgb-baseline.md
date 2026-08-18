@@ -6,12 +6,12 @@
 
 **Architecture:** A reusable Python module owns label cleaning, pose normalization, derived time-series signals, TSFEL extraction, LOSO evaluation, artifact persistence, and frame-level prediction. Thin CLI scripts and a clean notebook call that module. Built-in TSFEL statistical/temporal features replace the missing external custom-feature files.
 
-**Tech Stack:** Python 3.13 (`E:\Anaconda3\python.exe`), pandas, NumPy, TSFEL 0.2.0, scikit-learn 1.7.2, SciPy, joblib, matplotlib/seaborn, pytest, nbformat.
+**Tech Stack:** Python 3.13 (`python`), pandas, NumPy, TSFEL 0.2.0, scikit-learn 1.7.2, SciPy, joblib, matplotlib/seaborn, pytest, nbformat.
 
 ## Global Constraints
 
 - Training participants are exactly `1, 2, 3, 5`.
-- Shared test input is `E:\DATA\Keypoint\test data_keypoint_shared.csv`.
+- Shared test input is `data/test_data_keypoint_shared.csv`.
 - Predict exactly eight activity classes; map `Throwing` to `Throwing things`; never train a `None` class.
 - Use 30 FPS, 150-frame windows, 50% training overlap, 0% held-out/test overlap, and a 70% majority threshold.
 - Never create windows across participant boundaries.
@@ -71,7 +71,7 @@ def test_validate_pose_columns_names_missing_column(synthetic_pose):
 Run:
 
 ```powershell
-& 'E:\Anaconda3\python.exe' -m pytest tests/test_tsfel_histgb_pipeline.py -k "clean_labels or pose_normalize or validate_pose" -v
+& 'python' -m pytest tests/test_tsfel_histgb_pipeline.py -k "clean_labels or pose_normalize or validate_pose" -v
 ```
 
 Expected: collection/import failure because `tsfel_histgb_pipeline.py` does not exist.
@@ -141,7 +141,7 @@ def test_unlabeled_windows_cover_tail():
 - [ ] **Step 2: Run the new tests and verify RED**
 
 ```powershell
-& 'E:\Anaconda3\python.exe' -m pytest tests/test_tsfel_histgb_pipeline.py -k "tsfel_config or labeled_windows or cover_tail" -v
+& 'python' -m pytest tests/test_tsfel_histgb_pipeline.py -k "tsfel_config or labeled_windows or cover_tail" -v
 ```
 
 Expected: failures because TSFEL extraction/window APIs are not implemented.
@@ -174,7 +174,7 @@ Feature names are taken from the returned DataFrame. The extraction loop operate
 - [ ] **Step 4: Run the Task 2 tests and full unit suite**
 
 ```powershell
-& 'E:\Anaconda3\python.exe' -m pytest tests/test_tsfel_histgb_pipeline.py -v
+& 'python' -m pytest tests/test_tsfel_histgb_pipeline.py -v
 ```
 
 Expected: all Task 1 and Task 2 tests pass with no external custom-feature file.
@@ -229,7 +229,7 @@ def test_abnormal_metrics_use_four_defined_classes():
 - [ ] **Step 2: Run tests and verify RED**
 
 ```powershell
-& 'E:\Anaconda3\python.exe' -m pytest tests/test_tsfel_histgb_pipeline.py -k "joblib or abnormal_metrics" -v
+& 'python' -m pytest tests/test_tsfel_histgb_pipeline.py -k "joblib or abnormal_metrics" -v
 ```
 
 Expected: missing estimator/artifact API failures.
@@ -262,8 +262,8 @@ The CLI accepts `--data-dir`, `--subjects`, `--test-file`, `--artifact-dir`, `--
 - [ ] **Step 5: Run all tests and compilation**
 
 ```powershell
-& 'E:\Anaconda3\python.exe' -m pytest tests/test_tsfel_histgb_pipeline.py -v
-& 'E:\Anaconda3\python.exe' -m py_compile .\tsfel_histgb_pipeline.py .\train_tsfel_histgb.py
+& 'python' -m pytest tests/test_tsfel_histgb_pipeline.py -v
+& 'python' -m py_compile .\tsfel_histgb_pipeline.py .\train_tsfel_histgb.py
 ```
 
 Expected: all tests pass and compilation exits zero.
@@ -320,7 +320,7 @@ def test_submission_has_exact_three_columns(tmp_path, fake_prediction):
 - [ ] **Step 2: Run tests and verify RED**
 
 ```powershell
-& 'E:\Anaconda3\python.exe' -m pytest tests/test_tsfel_histgb_pipeline.py -k "frame_predictions or submission" -v
+& 'python' -m pytest tests/test_tsfel_histgb_pipeline.py -k "frame_predictions or submission" -v
 ```
 
 Expected: prediction/output APIs are missing.
@@ -344,8 +344,8 @@ It loads the joblib, predicts the CSV, writes both outputs, and prints the predi
 - [ ] **Step 5: Run unit tests and compilation**
 
 ```powershell
-& 'E:\Anaconda3\python.exe' -m pytest tests/test_tsfel_histgb_pipeline.py -v
-& 'E:\Anaconda3\python.exe' -m py_compile .\predict_tsfel_histgb.py
+& 'python' -m pytest tests/test_tsfel_histgb_pipeline.py -v
+& 'python' -m py_compile .\predict_tsfel_histgb.py
 ```
 
 Expected: full suite passes and the CLI compiles.
@@ -394,7 +394,7 @@ nb = nbformat.read(p, as_version=4)
 validate(nb)
 assert len(nb.cells) >= 10
 print('VALID', len(nb.cells))
-'@ | & 'E:\Anaconda3\python.exe' -
+'@ | & 'python' -
 ```
 
 Expected: `VALID` with at least 10 cells and exit zero.
@@ -402,10 +402,10 @@ Expected: `VALID` with at least 10 cells and exit zero.
 - [ ] **Step 3: Run the full training command**
 
 ```powershell
-& 'E:\Anaconda3\python.exe' .\train_tsfel_histgb.py `
-  --data-dir 'E:\DATA\Keypoint\Train Data-20260812T151048Z-1-001\Train Data\keypointlabel' `
+& 'python' .\train_tsfel_histgb.py `
+  --data-dir 'data/keypointlabel' `
   --subjects 1 2 3 5 `
-  --test-file 'E:\DATA\Keypoint\test data_keypoint_shared.csv' `
+  --test-file 'data/test_data_keypoint_shared.csv' `
   --participant-id 4
 ```
 
@@ -432,7 +432,7 @@ assert {'predicted_label', 'prediction_confidence'} <= set(filled_df.columns)
 assert submission_df.columns.tolist() == ['participant_id', 'timestamp', 'predicted_label']
 assert not filled_df['predicted_label'].isna().any()
 print('VERIFIED', len(filled_df), model.stat().st_size)
-'@ | & 'E:\Anaconda3\python.exe' -
+'@ | & 'python' -
 ```
 
 Expected: `VERIFIED <row_count> <artifact_size>` and exit zero.
@@ -442,8 +442,8 @@ Expected: `VERIFIED <row_count> <artifact_size>` and exit zero.
 Document notebook execution, CLI retraining, CLI inference, artifact contents, output paths, and the distinction between LOSO accuracy and unlabeled shared-test predictions. Then run:
 
 ```powershell
-& 'E:\Anaconda3\python.exe' -m pytest -v
-& 'E:\Anaconda3\python.exe' -m py_compile .\tsfel_histgb_pipeline.py .\train_tsfel_histgb.py .\predict_tsfel_histgb.py
+& 'python' -m pytest -v
+& 'python' -m py_compile .\tsfel_histgb_pipeline.py .\train_tsfel_histgb.py .\predict_tsfel_histgb.py
 ```
 
 Expected: all tests pass; all files compile; no source or notebook references missing custom TSFEL files.

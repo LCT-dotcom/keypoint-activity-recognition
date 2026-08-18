@@ -21,7 +21,7 @@ This notebook measures improvements in a fixed order before S4 is used: baseline
 cells.append(
     nbf.v4.new_code_cell(
         """from pathlib import Path
-import json, sys, joblib, numpy as np, pandas as pd
+import json, os, sys, joblib, numpy as np, pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from IPython.display import display
@@ -36,9 +36,9 @@ from tsfel_histgb_pipeline import (
     validate_pose_columns, write_prediction_outputs,
 )
 
-DATA_DIR = Path(r'E:\\DATA\\Keypoint\\Train Data-20260812T151048Z-1-001\\Train Data\\keypointlabel')
-S4_SHARED_FILE = Path(r'E:\\DATA\\Keypoint\\test data_keypoint_shared.csv')
-S4_LABEL_FILE = Path(r'E:\\DATA\\Keypoint\\Final Participant-20260816T173530Z-1-001\\Final Participant\\keypointlabel\\keypoints_with_labels_4.csv')
+DATA_DIR = Path(os.environ.get('KEYPOINT_DATA_DIR', 'data/keypointlabel'))
+S4_SHARED_FILE = Path(os.environ.get('KEYPOINT_TEST_FILE', 'data/test_data_keypoint_shared.csv'))
+S4_LABEL_FILE = Path(os.environ.get('KEYPOINT_S4_LABEL_FILE', 'data/keypointlabel/keypoints_with_labels_4.csv'))
 SUBJECTS_STAGE1 = [1, 2, 3, 5]
 ALL_SUBJECTS = [1, 2, 3, 4, 5]
 RANDOM_STATE = 42

@@ -23,12 +23,6 @@ from tsfel_histgb_pipeline import (
 )
 
 
-DEFAULT_DATA_DIR = Path(
-    r"E:\DATA\Keypoint\Train Data-20260812T151048Z-1-001\Train Data\keypointlabel"
-)
-DEFAULT_TEST_FILE = Path(r"E:\DATA\Keypoint\test data_keypoint_shared.csv")
-
-
 def build_cache_signature(csv_path: Path, config: dict) -> dict:
     config_payload = json.dumps(config, sort_keys=True, default=str).encode("utf-8")
     return {
@@ -52,9 +46,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Train and evaluate the TSFEL + HistGradientBoosting LOSO baseline."
     )
-    parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR)
+    parser.add_argument("--data-dir", type=Path, required=True)
     parser.add_argument("--subjects", type=int, nargs="+", default=[1, 2, 3, 5])
-    parser.add_argument("--test-file", type=Path, default=DEFAULT_TEST_FILE)
+    parser.add_argument("--test-file", type=Path)
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts/tsfel_histgb"))
     parser.add_argument("--cache-dir", type=Path, default=Path("artifacts/tsfel_histgb/cache"))
     parser.add_argument("--output-dir", type=Path, default=Path("outputs/tsfel_histgb"))

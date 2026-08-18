@@ -25,7 +25,7 @@ Pipeline order: validate data, engineer pose signals, extract TSFEL features, ru
 cells.append(
     nbf.v4.new_code_cell(
         """from pathlib import Path
-import inspect, json, sys, joblib, numpy as np, pandas as pd
+import inspect, json, os, sys, joblib, numpy as np, pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from IPython.display import display
@@ -34,9 +34,9 @@ import sklearn, tsfel
 from tsfel_histgb_pipeline import *
 from train_tsfel_histgb import load_or_extract_subject
 
-DATA_DIR = Path(r'E:\\DATA\\Keypoint\\Train Data-20260812T151048Z-1-001\\Train Data\\keypointlabel')
-TEST_FILE = Path(r'E:\\DATA\\Keypoint\\test data_keypoint_shared.csv')
-S4_LABEL_FILE = Path(r'E:\\DATA\\Keypoint\\Final Participant-20260816T173530Z-1-001\\Final Participant\\keypointlabel\\keypoints_with_labels_4.csv')
+DATA_DIR = Path(os.environ.get('KEYPOINT_DATA_DIR', 'data/keypointlabel'))
+TEST_FILE = Path(os.environ.get('KEYPOINT_TEST_FILE', 'data/test_data_keypoint_shared.csv'))
+S4_LABEL_FILE = Path(os.environ.get('KEYPOINT_S4_LABEL_FILE', 'data/keypointlabel/keypoints_with_labels_4.csv'))
 SUBJECTS = [1, 2, 3, 5]
 PARTICIPANT_ID = 4
 ARTIFACT_DIR = Path('artifacts/tsfel_histgb')

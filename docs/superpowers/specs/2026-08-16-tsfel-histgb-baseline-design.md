@@ -2,7 +2,7 @@
 
 ## Goal
 
-Replace the duplicated and broken notebook pipeline with a reproducible TSFEL + HistGradientBoosting baseline that performs LOSO on participants 1, 2, 3, and 5, exports a `.joblib` artifact, and automatically predicts every row of `E:\DATA\Keypoint\test data_keypoint_shared.csv`.
+Replace the duplicated and broken notebook pipeline with a reproducible TSFEL + HistGradientBoosting baseline that performs LOSO on participants 1, 2, 3, and 5, exports a `.joblib` artifact, and automatically predicts every row of `data/test_data_keypoint_shared.csv`.
 
 ## Scope
 
@@ -10,9 +10,9 @@ This is a baseline repair only. It remains close to the paper and original noteb
 
 ## Inputs
 
-- Training directory: `E:\DATA\Keypoint\Train Data-20260812T151048Z-1-001\Train Data\keypointlabel`
+- Training directory: `data/keypointlabel`
 - Training files: `keypoints_with_labels_1.csv`, `keypoints_with_labels_2.csv`, `keypoints_with_labels_3.csv`, `keypoints_with_labels_5.csv`
-- Shared test file: `E:\DATA\Keypoint\test data_keypoint_shared.csv`
+- Shared test file: `data/test_data_keypoint_shared.csv`
 - Sampling rate: 30 FPS
 - Window length: 150 frames (5 seconds)
 - Training overlap: 50%

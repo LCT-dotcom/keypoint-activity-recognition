@@ -45,7 +45,7 @@ def test_overlapping_probabilities_are_averaged_and_edges_are_covered():
 
 - [ ] **Step 2: Run RED test**
 
-Run: `E:\Anaconda3\python.exe -m pytest tests/test_phase_d_evaluation.py -q -p no:cacheprovider`
+Run: `python -m pytest tests/test_phase_d_evaluation.py -q -p no:cacheprovider`
 
 Expected: collection failure because `phase_d_evaluation` does not exist.
 
@@ -55,7 +55,7 @@ Implement strict shape/class-order validation, probability averaging, nearest-co
 
 - [ ] **Step 4: Run GREEN test and full suite**
 
-Run focused test, then `E:\Anaconda3\python.exe -m pytest tests -q -p no:cacheprovider`.
+Run focused test, then `python -m pytest tests -q -p no:cacheprovider`.
 
 - [ ] **Step 5: Add RED tests for soft fusion and Viterbi**
 
@@ -229,7 +229,7 @@ Run synthetic four-subject end-to-end tests, then the full suite.
 
 - [ ] **Step 1: Check runtime before production edits**
 
-Run: `E:\Anaconda3\python.exe -c "import torch; print(torch.__version__, torch.cuda.is_available())"`
+Run: `python -c "import torch; print(torch.__version__, torch.cuda.is_available())"`
 
 If PyTorch is unavailable, record D4 as unavailable and continue with D0-D3; do not install an unapproved GPU stack.
 

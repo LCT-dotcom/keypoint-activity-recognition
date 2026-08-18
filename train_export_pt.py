@@ -22,14 +22,9 @@ from keypoint_pt_pipeline import (
 )
 
 
-DEFAULT_DATA_DIR = Path(
-    r"E:\DATA\Keypoint\Train Data-20260812T151048Z-1-001\Train Data\keypointlabel"
-)
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Train LOSO keypoint TCN and export a portable .pt checkpoint")
-    parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR)
+    parser.add_argument("--data-dir", type=Path, required=True)
     parser.add_argument("--subjects", nargs="+", type=int, default=[1, 2, 3, 5])
     parser.add_argument("--output", type=Path, default=Path("artifacts/keypoint_tcn_1_2_3_5.pt"))
     parser.add_argument("--metrics-dir", type=Path, default=Path("artifacts/metrics"))

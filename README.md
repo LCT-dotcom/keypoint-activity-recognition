@@ -45,7 +45,7 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-The scripts default to the local paths used for this experiment. Pass explicit CLI paths when using another machine or dataset location.
+Pass dataset locations explicitly through the CLI arguments. Notebook configuration cells also accept `KEYPOINT_DATA_DIR`, `KEYPOINT_TEST_FILE`, and `KEYPOINT_S4_LABEL_FILE` environment variables.
 
 ## Predict a New Participant
 
@@ -122,3 +122,7 @@ The challenge dataset was provided by **Taihei Fujioka, Christina Garcia, and So
   note   = {Challenge dataset and task specification}
 }
 ```
+
+## License
+
+Repository source code is released under the [MIT License](LICENSE). The included article remains under its stated [Creative Commons Attribution 4.0 license](paper/README.md). The trained models, generated predictions, and evaluation artifacts are provided for research reproducibility; their availability does not grant rights to the underlying challenge dataset. Dataset access and use remain subject to the terms set by Taihei Fujioka, Christina Garcia, Sozo Inoue, and the challenge organizers.
