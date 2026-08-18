@@ -4,6 +4,10 @@ Reproducible code and artifacts for eight-class human behavior recognition from 
 
 Paper DOI: [10.1088/1742-6596/3180/1/012004](https://doi.org/10.1088/1742-6596/3180/1/012004)
 
+## About
+
+This repository accompanies my first published paper. I am Chinh Tan Ly, the paper's first author, and this work was co-authored with Quang Linh Huynh. The repository preserves the complete reproducible path from the original V7-compatible pipeline to the leakage-free Phase D evaluation and deployment artifacts.
+
 ## Main Result
 
 The selected method is **D3u**: V7-compatible experiment-C features, training-only feature selection, regularized HistGradientBoosting, and nested Viterbi decoding.
